@@ -52,32 +52,22 @@ table {
 
 /*---ROOT VARIABLES---*/
 :root {
-    background-color: #ffffff;
-    font-family: Habibi;
-}
-h1, h2, h3 {
-    font-family: "Irish Grover";
-}
-h1 {
-    font-size: 2.5em;
-    padding-bottom: 0;
-    text-shadow: 2px 2px 2px #000000;
-}
-h2 {
-    font-size: 1.75em;
-}
-h3, p, nav {
-    font-size: 1.25em;
-}
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
 
+}
 
 /*---GLOBAL STYLES (MOBILE/SMALL)---*/
-body{
+body {
     min-width: 428px;
+    background-color: var(--white);
+    font-family: Habibi;
 }
 header, footer {
-    background-color: #06A816;
-    color: #ffffff;
+    background-color: var(--green);
+    color: var(--white);
 }
 header {
     padding: 5px 20px 20px 20px;
@@ -89,30 +79,47 @@ header p {
     padding-top: 15px;
     font-style: italic;
 }
+h1, h2, h3 {
+    font-family: "Irish Grover";
+}
+h1, h3, figure, footer, .copyright {
+    text-align: center;
+}
+h1 {
+    font-size: 2.5em;
+    padding-bottom: 0;
+    text-shadow: 2px 2px 2px var(--black);
+}
+h2 {
+    font-size: 1.75em;
+}
+h3, p, nav {
+    font-size: 1.25em;
+}
 nav {
     padding: 40px;
 }
 nav li {
-    background-color: #E75D02;
+    background-color: var(--orange);
     padding: 10px;
     margin: 10px auto;
     text-align: center;
     width: 325px;
     border-radius: 5px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--white);
 }
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
 }
 nav div {
     width: 75px;
-    background-color: #E75D02;
-    color: #ffffff;
+    background-color: var(--orange);
+    color: var(--white);
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--white);
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -127,9 +134,6 @@ main section {
 main p {
     padding: 10px 10px 20px;
 }
-h1, h3, figure, footer, .copyright {
-    text-align: center;
-}
 figure {
     display: flex;
     padding: 20px;
@@ -142,7 +146,7 @@ figure {
 figcaption {
     position: absolute;
     background-color: rgba(0,0,0,0.7);
-    color: #ffffff;
+    color: var(--white);
     z-index: 1;
     padding: 10px;
     width: 100px;
@@ -157,7 +161,7 @@ footer ul, address {
     line-height: 1.5;
 }
 .copyright {
-    color: #06A816;
+    color: var(--green);
     padding: 5px;
 }
 
@@ -190,11 +194,11 @@ footer ul, address {
         flex-direction: column;
         margin-bottom: 40px;
     }
-    h1 {
-        text-align: left;
-    }
     header p {
         margin: 0;
+    }
+    h1 {
+        text-align: left;
     }
     nav {
         position: absolute;
